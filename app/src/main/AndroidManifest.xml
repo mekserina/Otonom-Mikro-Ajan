@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
         android:allowBackup="true"
-        android:label="Otonom Mikro-Ajan"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Otonom Ajan"
         android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
         
         <activity
