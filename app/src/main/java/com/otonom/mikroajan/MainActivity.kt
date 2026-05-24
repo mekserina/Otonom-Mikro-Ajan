@@ -1,5 +1,6 @@
 package com.otonom.mikroajan
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
@@ -118,5 +119,5 @@ fun LogEntry(event: EventNode) {
 fun isNotificationServiceEnabled(context: Context): Boolean {
     val pkgName = context.packageName
     val flat = Settings.Secure.getString(context.contentResolver, "enabled_notification_listeners")
-    return flat != null && flat.contains(pkgName)
+    return flat?.contains(pkgName) == true
 }

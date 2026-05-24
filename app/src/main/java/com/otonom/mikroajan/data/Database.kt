@@ -23,7 +23,7 @@ interface EventDao {
     suspend fun insert(event: EventNode)
 }
 
-@Database(entities = [EventNode::class], version = 1)
+@Database(entities = [EventNode::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun eventDao(): EventDao
 }
