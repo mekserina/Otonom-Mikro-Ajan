@@ -3,7 +3,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Otonom Ajan"
-        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+        android:theme="@style/Theme.OtonomAjan">
         
         <activity
             android:name=".MainActivity"

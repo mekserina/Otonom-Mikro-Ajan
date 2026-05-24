@@ -112,6 +112,9 @@ fun LogEntry(event: EventNode) {
             Text("INGRESS: ${event.packageName}", color = Color(0xFF00FF41), fontSize = 10.sp, fontFamily = FontFamily.Monospace)
         }
         Text("DATA: ${event.title} - ${event.content}", color = if (event.priority >= 40) Color.Yellow else Color.White, fontSize = 11.sp, fontFamily = FontFamily.Monospace)
+        event.recommendation?.let {
+            Text("AI SUGGESTION: $it", color = Color(0xFF00FF41), fontSize = 10.sp, fontFamily = FontFamily.Monospace, modifier = Modifier.padding(top = 2.dp))
+        }
         Divider(color = Color(0xFF111111))
     }
 }

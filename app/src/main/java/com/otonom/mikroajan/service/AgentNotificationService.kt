@@ -22,12 +22,20 @@ class AgentNotificationService : NotificationListenerService() {
 
         scope.launch {
             val db = DatabaseProvider.getDatabase(applicationContext)
+            val priority = if (text.contains("acil", ignoreCase = true) || text.contains("kritik", ignoreCase = true)) 50 else 0
+            val recommendation = when {
+                priority >= 50 -> "ACİL MÜDAHALE GEREKLİ: Sistemi kontrol edin."
+                text.contains("pil", ignoreCase = true) || text.contains("batarya", ignoreCase = true) -> "Enerji tasarrufu modunu değerlendirin."
+                text.contains("güvenlik", ignoreCase = true) || text.contains("şifre", ignoreCase = true) -> "Güvenlik protokollerini gözden geçirin."
+                else -> "Otonom analiz: Normal aktivite."
+            }
             val event = EventNode(
                 packageName = packageName,
                 title = title,
                 content = text,
                 timestamp = System.currentTimeMillis(),
-                priority = if (text.contains("acil", ignoreCase = true) || text.contains("kritik", ignoreCase = true)) 50 else 0
+                priority = priority,
+                recommendation = recommendation
             )
             db.eventDao().insert(event)
         }

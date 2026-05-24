@@ -3,13 +3,30 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!-- Background layer -->
     <path
         android:fillColor="#0D0208"
         android:pathData="M0,0h108v108h-108z" />
+    
+    <!-- Outer Neural Ring -->
+    <path
+        android:strokeColor="#00FF41"
+        android:strokeWidth="2"
+        android:pathData="M54,10 A44,44 0 1,1 53.9,10" />
+    
+    <!-- Inner Scanning Eye / Pulse -->
     <path
         android:fillColor="#00FF41"
-        android:pathData="M54,20L20,37.5v35L54,90l34,-17.5v-35zM54,25L84,40v30L54,85L24,70V40z" />
+        android:pathData="M54,35c-15,0-27,10-27,19s12,19 27,19s27-10 27-19S69,35 54,35z M54,65c-6,0-11-5-11-11s5-11 11-11s11,5 11,11 S60,65 54,65z" />
+    
+    <!-- Central Agent "A" Core -->
     <path
         android:fillColor="#00FF41"
-        android:pathData="M54,40m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0" />
+        android:pathData="M54,48l-8,12h16l-8,-12z" />
+    
+    <!-- Digital Connectivity Lines -->
+    <path
+        android:strokeColor="#00FF41"
+        android:strokeWidth="1.5"
+        android:pathData="M54,10V25 M54,83V98 M10,54H25 M83,54H98" />
 </vector>

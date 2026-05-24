@@ -1,0 +1,4 @@
+<resources>
+    <style name="Theme.OtonomAjan" parent="android:Theme.DeviceDefault.NoActionBar">
+    </style>
+</resources>
